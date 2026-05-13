@@ -38,7 +38,7 @@ All notebooks feature **business use cases** including application processing, c
    - `AI_FOUNDRY_PROJECT_ENDPOINT` — Your Microsoft Foundry project endpoint
    - `AZURE_OPENAI_ENDPOINT` — Your Azure OpenAI endpoint
    - `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` — Model deployment name (e.g., gpt-4o)
-   - Additional variables as needed: `BING_CONNECTION_ID`, `AZURE_AI_SEARCH_ENDPOINT`, Redis connection strings
+   - Additional variables as needed: `AZURE_AI_SEARCH_ENDPOINT`, Redis connection strings
 
 3. **Verify authentication** — Run `az account show` to confirm the CLI is signed in and targeting the correct subscription.
 
@@ -64,11 +64,21 @@ Single-agent patterns for Azure AI. See [agents/README.md](agents/README.md) for
 | 4 | `4-azure-ai-with-function-tools.ipynb` | Function tool integration patterns |
 | 5 | `5-azure-ai-with-code-interpreter.ipynb` | Python code execution capabilities |
 | 6 | `6-azure-ai-with-file-search.ipynb` | Document-based question answering |
-| 7 | `7-azure-ai-with-bing-grounding.ipynb` | Web search integration using Bing |
+| 7 | `7-azure-ai-with-web-search.ipynb` | Web search integration using WebSearchTool |
 | 8 | `8-azure-ai-with-hosted-mcp.ipynb` | Model Context Protocol (MCP) server integration |
 | 9 | `9-azure-ai-with-existing-multi-turn-thread.ipynb` | Managing multi-turn conversation threads |
 
-**Learning Path**: 1 (Basic) → 2 (Explicit Settings) → 4 (Function Tools) → 5 (Code Interpreter) → 7 (Bing Grounding) → 8 (MCP)
+**Learning Path**: 1 (Basic) → 2 (Explicit Settings) → 4 (Function Tools) → 5 (Code Interpreter) → 7 (Web Search) → 8 (MCP)
+
+---
+
+### 📁 `skills/`
+
+Agent Skills demonstrate file-based and code-defined skill patterns. See the notebook for details.
+
+| Notebook | Use Case | Key Concepts |
+|----------|----------|--------------|
+| `1-agent-with-skills.ipynb` | **FSI Credit Risk + Compliance** | File-based skills, code-defined skills, SkillsProvider |
 
 ---
 

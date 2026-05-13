@@ -18,7 +18,7 @@ All notebooks are in the `azure-ai-agents/` folder:
 | 4 | [`4-azure-ai-with-function-tools.ipynb`](azure-ai-agents/4-azure-ai-with-function-tools.ipynb) | Function tool integration patterns |
 | 5 | [`5-azure-ai-with-code-interpreter.ipynb`](azure-ai-agents/5-azure-ai-with-code-interpreter.ipynb) | Python code execution capabilities |
 | 6 | [`6-azure-ai-with-file-search.ipynb`](azure-ai-agents/6-azure-ai-with-file-search.ipynb) | Document-based question answering |
-| 7 | [`7-azure-ai-with-bing-grounding.ipynb`](azure-ai-agents/7-azure-ai-with-bing-grounding.ipynb) | Web search integration using Bing |
+| 7 | [`7-azure-ai-with-web-search.ipynb`](azure-ai-agents/7-azure-ai-with-web-search.ipynb) | Web search integration using WebSearchTool |
 | 8 | [`8-azure-ai-with-hosted-mcp.ipynb`](azure-ai-agents/8-azure-ai-with-hosted-mcp.ipynb) | Model Context Protocol (MCP) server integration |
 | 9 | [`9-azure-ai-with-existing-multi-turn-thread.ipynb`](azure-ai-agents/9-azure-ai-with-existing-multi-turn-thread.ipynb) | Managing multi-turn conversation threads |
 
@@ -35,9 +35,10 @@ All notebooks are in the `azure-ai-agents/` folder:
    AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-4o
    ```
 
-3. **For Bing Grounding** (optional):
+3. **For Web Search** (optional):
    ```
-   BING_CONNECTION_ID=/subscriptions/.../connections/bing-connection
+   # Web search uses WebSearchTool - no additional connection needed
+   # The tool is automatically available through the Foundry project
    ```
 
 ## 🎓 Learning Path
@@ -46,7 +47,7 @@ All notebooks are in the `azure-ai-agents/` folder:
 |-------|-----------|
 | **Beginner** | 1 (Basic) → 2 (Explicit Settings) |
 | **Intermediate** | 3 (Existing Agent) → 4 (Function Tools) |
-| **Advanced** | 5 (Code Interpreter) → 6 (File Search) → 7 (Bing Grounding) → 8 (MCP) → 9 (Multi-turn) |
+| **Advanced** | 5 (Code Interpreter) → 6 (File Search) → 7 (Web Search) → 8 (MCP) → 9 (Multi-turn) |
 
 ## 📚 Related Resources
 

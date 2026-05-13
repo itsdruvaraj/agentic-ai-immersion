@@ -18,7 +18,8 @@
 - [🚀 Getting Started](#-getting-started)
   - [Required Azure RBAC Roles](#step-5-required-azure-rbac-roles)
 - [📚 Learning Path](#-learning-path)
-- [🛠️ Troubleshooting & Support](#️-troubleshooting--support)
+- [� Industry Use Cases](#-industry-use-cases)
+- [�🛠️ Troubleshooting & Support](#️-troubleshooting--support)
 - [🤝 Community & Contributions](#-community--contributions)
 
 ---
@@ -31,7 +32,7 @@ This comprehensive workshop transforms you from an AI enthusiast into a Microsof
 |--------|--------|------------|
 | **Foundation** | Setup, Authentication, Quick Start | Azure AI Foundry, Azure AI Agents v2 |
 | **Core AI** | Prompting, Embeddings, RAG | Azure OpenAI, Azure AI Search |
-| **Agents** | File Search, Bing, Azure Functions, Multi-Agent | Code Interpreter, Bing Grounding, Multi-Agent Workflows |
+| **Agents** | File Search, Web Search, Azure Functions, Multi-Agent | Code Interpreter, WebSearchTool, Multi-Agent Workflows |
 | **Foundry IQ** | Revolutionary agentic retrieval with knowledge bases | Foundry IQ, Knowledge Bases |
 | **Advanced** | MCP Integration, Red Teaming, Agent Framework | Foundry MCP Server, Microsoft Agent Framework |
 | **Operations** | Observability, Evaluation, Fine-Tuning | OpenTelemetry, Azure Monitor, Built-in Evaluators |
@@ -53,18 +54,20 @@ agentic-ai-immersion-day/
 │   ├── 1-basics.ipynb                         # Agent fundamentals
 │   ├── 2-code-interpreter.ipynb               # Code execution
 │   ├── 3-file-search.ipynb                    # Document Q&A
-│   ├── 4-bing-grounding.ipynb                 # Web search integration
+│   ├── 4-web-search.ipynb                      # Web search integration (WebSearchTool)
 │   ├── 5-agents-aisearch.ipynb                # Enterprise search
 │   ├── 6-multi-agent-solution-with-workflows.ipynb
 │   ├── 7-mcp-tools.ipynb                      # MCP integration
 │   ├── 8-foundry-IQ-agents.ipynb              # 🧠 Foundry IQ - Agentic retrieval
-│   └── 9-agent-memory-search.ipynb            # Memory patterns
+│   ├── 9-agent-memory-search.ipynb            # Memory patterns
+│   └── 10-hosted-agent-with-skills.ipynb      # 🏦 Hosted agent + Skills (FSI)
 │
 ├── 🤖⚙️ agent-framework/                       # Microsoft Agent Framework (Business use cases)
 │   ├── agents/azure-ai-agents/                # 9 agent notebooks (1-9)
 │   ├── context-providers/                     # 2 context/memory notebooks (1-2)
 │   ├── middleware/                            # 9 interception patterns (1-9)
 │   ├── observability/                         # 3 telemetry notebooks (1-3)
+│   ├── skills/                                # Agent Skills (FSI: credit risk, compliance)
 │   ├── threads/                               # 3 persistence notebooks (1-3)
 │   └── workflows/                             # 9 orchestration notebooks (1-9)
 │
@@ -75,15 +78,7 @@ agentic-ai-immersion-day/
 │   ├── 4-tool-call-accuracy-evaluation.ipynb  # Tool accuracy
 │   └── 5-red-team-security-testing.ipynb      # Security testing
 │
-├── 🚀 hosted-agents/                          # Hosted Agent Deployment
-│   ├── azure.yaml                             # azd project configuration
-│   ├── README.md                              # Deployment guide
-│   └── src/WebSearchAgent/                    # Web search agent
-│       ├── agent.yaml                         # Agent definition
-│       ├── main.py                            # Agent implementation
-│       ├── Dockerfile                         # Container definition
-│       └── requirements.txt                   # Agent dependencies
-│
+
 ├── 🐳 .devcontainer/                          # Dev Container configuration
 │   └── devcontainer.json                      # Container settings
 │
@@ -152,7 +147,6 @@ AZURE_OPENAI_API_KEY=your-api-key
 AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-4o
 
 # Optional (for specific notebooks)
-BING_CONNECTION_ID=/subscriptions/.../connections/bing
 AZURE_AI_SEARCH_ENDPOINT=https://your-search.search.windows.net
 ```
 
@@ -247,12 +241,13 @@ Follow this structured learning path to master Microsoft Foundry and AI Agents:
 | 1 | [Agent Basics](azure-ai-agents/1-basics.ipynb) | Fundamental agent concepts and lifecycle |
 | 2 | [Code Interpreter](azure-ai-agents/2-code-interpreter.ipynb) | Python code execution capabilities |
 | 3 | [File Search](azure-ai-agents/3-file-search.ipynb) | Document processing and Q&A |
-| 4 | [Bing Grounding](azure-ai-agents/4-bing-grounding.ipynb) | Web search integration |
+| 4 | [Web Search](azure-ai-agents/4-web-search.ipynb) | WebSearchTool for real-time market data |
 | 5 | [Agents + AI Search](azure-ai-agents/5-agents-aisearch.ipynb) | Enterprise search integration |
 | 6 | [Multi-Agent Workflows](azure-ai-agents/6-multi-agent-solution-with-workflows.ipynb) | Collaborative AI systems |
 | 7 | [MCP Tools](azure-ai-agents/7-mcp-tools.ipynb) | Model Context Protocol integration |
 | 8 | [🧠 Foundry IQ Agents](azure-ai-agents/8-foundry-IQ-agents.ipynb) | **Revolutionary agentic retrieval** - Knowledge-grounded agents |
 | 9 | [Agent Memory Search](azure-ai-agents/9-agent-memory-search.ipynb) | Persistent memory patterns |
+| 10 | [🏦 Hosted Agent + Skills](azure-ai-agents/10-hosted-agent-with-skills.ipynb) | Skills REST API + hosted agent deployment (FSI) |
 
 ### 🤖⚙️ Phase 2: Microsoft Agent Framework
 **Location:** `agent-framework/`
@@ -271,7 +266,7 @@ The **Microsoft Agent Framework** is an open-source SDK that unifies Semantic Ke
 | 4 | [Function Tools](agent-framework/agents/azure-ai-agents/4-azure-ai-with-function-tools.ipynb) | Comprehensive function tool integration patterns |
 | 5 | [Code Interpreter](agent-framework/agents/azure-ai-agents/5-azure-ai-with-code-interpreter.ipynb) | Python code execution and mathematical problem solving |
 | 6 | [File Search](agent-framework/agents/azure-ai-agents/6-azure-ai-with-file-search.ipynb) | Document-based question answering with file uploads |
-| 7 | [Bing Grounding](agent-framework/agents/azure-ai-agents/7-azure-ai-with-bing-grounding.ipynb) | Web search integration using Bing Grounding |
+| 7 | [Web Search](agent-framework/agents/azure-ai-agents/7-azure-ai-with-web-search.ipynb) | Web search integration using WebSearchTool |
 | 8 | [Hosted MCP](agent-framework/agents/azure-ai-agents/8-azure-ai-with-hosted-mcp.ipynb) | Model Context Protocol server integration |
 | 9 | [Multi-turn Threads](agent-framework/agents/azure-ai-agents/9-azure-ai-with-existing-multi-turn-thread.ipynb) | Managing multi-turn conversation threads |
 
@@ -281,6 +276,12 @@ The **Microsoft Agent Framework** is an open-source SDK that unifies Semantic Ke
 |---|----------|----------|
 | 1 | [Simple Context Provider](agent-framework/context-providers/1-simple-context-provider.ipynb) | Customer Profile Collection |
 | 2 | [Azure AI Search Context](agent-framework/context-providers/2-azure-ai-search-context-agentic.ipynb) | Document-Based Decisions with RAG |
+
+#### 🎯 Skills (`skills/`)
+
+| # | Notebook | Use Case |
+|---|----------|----------|
+| 1 | [Agent with Skills](agent-framework/skills/1-agent-with-skills.ipynb) | FSI Credit Risk + Compliance (file-based & code-defined skills) |
 
 #### 🛡️ Middleware (`middleware/`)
 
@@ -343,9 +344,9 @@ Comprehensive evaluation, observability, and security testing for AI agents.
 
 ---
 
-### 💼 Industry Use Cases
+## 💼 Industry Use Cases
 
-For 49 real-world FSI use cases (banking, insurance, investment) mapped to each notebook, see [USE-CASES.md](USE-CASES.md).
+For 49 real-world FSI use cases (banking, insurance, investment) mapped to each notebook, see [💼 USE-CASES.md](USE-CASES.md).
 
 ---
 

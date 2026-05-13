@@ -261,3 +261,8 @@ logs/
 .cache/
 tmp/
 temp/
+# Development/CI utilities
+run_notebooks.py
+run_one_nb.py
+*.docx~
+~$*
