@@ -43,12 +43,10 @@ All notebooks feature **business use cases** including advisory services, approv
    AI_FOUNDRY_PROJECT_ENDPOINT=https://<account>.services.ai.azure.com/api/projects/<project>
    TENANT_ID=your-tenant-id
    AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-4o
-
-   # Azure OpenAI (for local evaluations)
-   AZURE_OPENAI_ENDPOINT=https://your-openai-resource.openai.azure.com/
-   AZURE_OPENAI_API_KEY=your_api_key
-   AZURE_OPENAI_DEPLOYMENT=your_deployment_name
    ```
+
+   > Authentication uses **Microsoft Entra ID** via `az login` (and the project's
+   > managed identity). No Azure OpenAI API key is required for these notebooks.
 
 2. **Install packages**:
 
