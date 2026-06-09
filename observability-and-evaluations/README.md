@@ -72,7 +72,6 @@ All notebooks feature **business use cases** including advisory services, approv
 | [2-agent-evaluation.ipynb](#2-agent-evaluationipynb) | Advisory Agent Evaluation | Built-in evaluators, safety checks |
 | [3-agent-evaluation-with-function-tools.ipynb](#3-agent-evaluation-with-function-toolsipynb) | Business Assistant | Tool-enabled agent evaluation |
 | [4-tool-call-accuracy-evaluation.ipynb](#4-tool-call-accuracy-evaluationipynb) | Operations Tooling | Tool selection accuracy |
-| [5-red-team-security-testing.ipynb](#5-red-team-security-testingipynb) | AI Security | Red team adversarial testing |
 
 ---
 
@@ -190,35 +189,6 @@ testing_criteria = [{
 
 ---
 
-### 5-red-team-security-testing.ipynb
-
-Learn how to perform **Red Team security scans** to identify AI vulnerabilities.
-
-| Feature | Description |
-|---------|-------------|
-| **Use Case** | AI Security Assessment |
-| **Attack Strategies** | BASE64, FLIP, CRESCENDO, MULTI_TURN encoding attacks |
-| **Risk Categories** | Violence, hate/unfairness, sexual, self-harm detection |
-| **Scan Management** | Create, monitor, and list security scans |
-| **Compliance** | Security testing requirements |
-
-**Key APIs:**
-
-```python
-from azure.ai.projects.models import RedTeam, AttackStrategy, RiskCategory
-
-red_team = RedTeam(
-    attack_strategies=[AttackStrategy.BASE64],
-    risk_categories=[RiskCategory.VIOLENCE],
-    target=AzureOpenAIModelConfiguration(model_deployment_name="gpt-4o"),
-)
-red_team_response = project_client.red_teams.create(red_team=red_team, headers={...})
-```
-
-**Why it matters:** Proactively identifies security vulnerabilities before deployment, preventing data breaches and compliance violations.
-
----
-
 ## Suggested Learning Path
 
 | Step | Focus | Notebook | Time |
@@ -227,13 +197,12 @@ red_team_response = project_client.red_teams.create(red_team=red_team, headers={
 | 2 | **Basic Evaluation** | `2-agent-evaluation.ipynb` | 25 min |
 | 3 | **Tool-Enabled Agents** | `3-agent-evaluation-with-function-tools.ipynb` | 30 min |
 | 4 | **Tool Accuracy** | `4-tool-call-accuracy-evaluation.ipynb` | 25 min |
-| 5 | **Security Testing** | `5-red-team-security-testing.ipynb` | 30 min |
 
 **Progression:**
 ```
-Telemetry → Basic Evaluation → Tool Evaluation → Tool Accuracy → Red Team
-    ↓              ↓                  ↓                ↓              ↓
- Monitoring    Safety checks     Function tools    Selection    Security
+Telemetry → Basic Evaluation → Tool Evaluation → Tool Accuracy
+    ↓              ↓                  ↓                ↓
+ Monitoring    Safety checks     Function tools    Selection
 ```
 
 ---
@@ -293,14 +262,12 @@ Telemetry → Basic Evaluation → Tool Evaluation → Tool Accuracy → Red Tea
 - [Azure AI Evaluation SDK](https://learn.microsoft.com/python/api/azure-ai-evaluation/)
 - [OpenTelemetry with Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-overview)
 - [Function Calling Best Practices](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/function-calling)
-- [Azure AI Red Teaming](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/red-teaming)
 
 ### GitHub Samples
 
 - [Agent Evaluation Samples](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/ai/azure-ai-projects/samples/evaluations)
 - [Telemetry Samples](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/ai/azure-ai-projects/samples/telemetry)
 - [Agentic Evaluators](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/ai/azure-ai-projects/samples/evaluations/agentic_evaluators)
-- [Red Team Samples](https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/ai/azure-ai-projects/samples/red_team)
 
 ---
 

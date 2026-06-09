@@ -35,10 +35,9 @@ This comprehensive workshop transforms you from an AI enthusiast into a Microsof
 | **Core AI** | Prompting, Embeddings, RAG | Azure OpenAI, Azure AI Search |
 | **Agents** | File Search, Web Search, Azure Functions, Multi-Agent | Code Interpreter, WebSearchTool, Multi-Agent Workflows |
 | **Foundry IQ** | Revolutionary agentic retrieval with knowledge bases | Foundry IQ, Knowledge Bases |
-| **Advanced** | MCP Integration, Red Teaming, Agent Framework | Foundry MCP Server, Microsoft Agent Framework |
+| **Advanced** | MCP Integration, Agent Framework | Foundry MCP Server, Microsoft Agent Framework |
 | **Operations** | Observability, Evaluation, Fine-Tuning | OpenTelemetry, Azure Monitor, Built-in Evaluators |
-| **Deployment** | Hosted Agents with Azure Developer CLI | Azure Developer CLI (azd), Hosted Agents |
-| **Enterprise** | Responsible AI | Red Team Testing, Content Safety |
+| **Enterprise** | Responsible AI | Content Safety |
 
 > **🎓 Format**: Intensive hands-on experience  
 > **🎯 Audience**: Developers, AI practitioners, and solution architects  
@@ -60,8 +59,7 @@ agentic-ai-immersion-day/
 │   ├── 6-multi-agent-solution-with-workflows.ipynb
 │   ├── 7-mcp-tools.ipynb                      # MCP integration
 │   ├── 8-foundry-IQ-agents.ipynb              # 🧠 Foundry IQ - Agentic retrieval
-│   ├── 9-agent-memory-search.ipynb            # Memory patterns
-│   └── 10-hosted-agent-with-skills.ipynb      # 🏦 Hosted agent + Skills (FSI)
+│   └── 9-agent-memory-search.ipynb            # Memory patterns
 │
 ├── 🤖⚙️ agent-framework/                       # Microsoft Agent Framework (Business use cases)
 │   ├── agents/azure-ai-agents/                # 9 agent notebooks (1-9)
@@ -76,17 +74,7 @@ agentic-ai-immersion-day/
 │   ├── 1-telemetry.ipynb                      # Azure Monitor telemetry
 │   ├── 2-agent-evaluation.ipynb               # Built-in evaluators
 │   ├── 3-agent-evaluation-with-function-tools.ipynb
-│   ├── 4-tool-call-accuracy-evaluation.ipynb  # Tool accuracy
-│   └── 5-red-team-security-testing.ipynb      # Security testing
-│
-├── 🚀 hosted-agents/                          # Hosted Agent Deployment
-│   ├── azure.yaml                             # azd project configuration
-│   ├── README.md                              # Deployment guide
-│   └── src/WebSearchAgent/                    # Web search agent
-│       ├── agent.yaml                         # Agent definition
-│       ├── main.py                            # Agent implementation
-│       ├── Dockerfile                         # Container definition
-│       └── requirements.txt                   # Agent dependencies
+│   └── 4-tool-call-accuracy-evaluation.ipynb  # Tool accuracy
 │
 ├── 🧩 byouc/                                   # Bring Your Own Use Case
 │   ├── Agentic_UseCase_Spec.md                # Use case spec template (Markdown)
@@ -260,7 +248,6 @@ Follow this structured learning path to master Microsoft Foundry and AI Agents:
 | 7 | [MCP Tools](azure-ai-agents/7-mcp-tools.ipynb) | Model Context Protocol integration |
 | 8 | [🧠 Foundry IQ Agents](azure-ai-agents/8-foundry-IQ-agents.ipynb) | **Revolutionary agentic retrieval** - Knowledge-grounded agents |
 | 9 | [Agent Memory Search](azure-ai-agents/9-agent-memory-search.ipynb) | Persistent memory patterns |
-| 10 | [🏦 Hosted Agent + Skills](azure-ai-agents/10-hosted-agent-with-skills.ipynb) | Skills REST API + hosted agent deployment (FSI) |
 
 ### 🤖⚙️ Phase 2: Microsoft Agent Framework
 **Location:** `agent-framework/`
@@ -351,7 +338,6 @@ Comprehensive evaluation, observability, and security testing for AI agents.
 | 2 | [Agent Evaluation](observability-and-evaluations/2-agent-evaluation.ipynb) | Advisory Agent Quality | Built-in evaluators (violence, fluency, task_adherence) |
 | 3 | [Function Tools Evaluation](observability-and-evaluations/3-agent-evaluation-with-function-tools.ipynb) | Business Assistant | FunctionTool evaluation, strict mode |
 | 4 | [Tool Call Accuracy](observability-and-evaluations/4-tool-call-accuracy-evaluation.ipynb) | Operations Tooling | `builtin.tool_call_accuracy`, JSONL data sources |
-| 5 | [Red Team Security](observability-and-evaluations/5-red-team-security-testing.ipynb) | AI Security Testing | RedTeam, AttackStrategy, RiskCategory |
 
 📖 [Complete Guide](observability-and-evaluations/README.md)
 

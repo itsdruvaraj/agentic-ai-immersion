@@ -7,7 +7,7 @@ This is a hands-on workshop repository for building AI agents with Microsoft Azu
 ### Repository Structure
 
 ```
-azure-ai-agents/           # Azure AI Agents notebooks (basics, tools, search, MCP, IQ, memory, hosted-skills)
+azure-ai-agents/           # Azure AI Agents notebooks (basics, tools, search, MCP, IQ, memory)
 agent-framework/            # Microsoft Agent Framework notebooks
   agents/                   #   Agent providers (Azure AI, OpenAI, etc.)
   workflows/                #   Multi-agent workflows (sequential, magentic, human-in-the-loop)
@@ -16,7 +16,7 @@ agent-framework/            # Microsoft Agent Framework notebooks
   context-providers/         #   Context providers (simple, AI Search agentic retrieval)
   skills/                   #   Agent Skills (file-based, code-defined, FSI scenarios)
   observability/             #   Tracing with Foundry & OpenTelemetry
-observability-and-evaluations/  # Telemetry, agent evaluation, red-team testing
+observability-and-evaluations/  # Telemetry, agent evaluation
 byouc/                      # Bring Your Own Use Case templates
 ```
 
@@ -126,7 +126,7 @@ Skills are domain-specific knowledge packages. Each has a `SKILL.md` with YAML f
 | Skill | Purpose | Maps To |
 |-------|---------|---------|
 | `microsoft-foundry` | **Orchestrator** — routes intent to sub-skills | All Foundry notebooks |
-| `foundry-hosted-agents` | Build/deploy containerized agents | `hosted-agents/` |
+| `foundry-hosted-agents` | Build/deploy containerized agents | Hosted agent deployment |
 | `foundry-toolboxes` | Intent-based Toolboxes (MCP, AI Search, Code Interpreter) | Tool integration |
 | `foundry-workflows` | Multi-agent orchestration & Connected Agents | `agent-framework/workflows/` |
 | `foundry-iq-knowledge-bases` | Agentic retrieval pipelines | `azure-ai-agents/8-foundry-IQ-agents.ipynb` |

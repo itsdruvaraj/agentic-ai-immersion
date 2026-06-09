@@ -64,7 +64,6 @@ This workshop features **49 real-world FSI use cases** across all notebooks, dem
 | Loan Advisory Quality Testing | Evaluate agent responses for quality, safety, compliance | Azure AI Agents v2, Built-in Evaluators | [2-agent-evaluation.ipynb](https://github.com/dhangerkapil/agentic-ai-immersion/blob/main/observability-and-evaluations/2-agent-evaluation.ipynb) |
 | Banking Assistant Evaluation | Evaluate tool-enabled agents for correct API usage | Azure AI Agents v2, Function Tools Evaluation | [3-agent-evaluation-with-function-tools.ipynb](https://github.com/dhangerkapil/agentic-ai-immersion/blob/main/observability-and-evaluations/3-agent-evaluation-with-function-tools.ipynb) |
 | Banking Operations Tool Validation | Validate correct tool selection for banking operations | Azure AI Agents v2, Tool Call Accuracy | [4-tool-call-accuracy-evaluation.ipynb](https://github.com/dhangerkapil/agentic-ai-immersion/blob/main/observability-and-evaluations/4-tool-call-accuracy-evaluation.ipynb) |
-| Banking AI Security Assessment | Identify vulnerabilities through adversarial attack simulations | Azure AI Agents v2, Red Team Testing | [5-red-team-security-testing.ipynb](https://github.com/dhangerkapil/agentic-ai-immersion/blob/main/observability-and-evaluations/5-red-team-security-testing.ipynb) |
 
 ## 🔑 Key Patterns Demonstrated
 
