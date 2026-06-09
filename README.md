@@ -118,11 +118,11 @@ For a consistent, pre-configured environment with all dependencies:
 
 ```powershell
 # Clone the repository
-git clone https://github.com/dhangerkapil/agentic-ai-immersion-day.git
-cd agentic-ai-immersion-day
+git clone https://github.com/itsdruvaraj/agentic-ai-immersion.git
+cd agentic-ai-immersion
 
 # Verify Python version
-python --version  # Python 3.10+ required
+python --version  # Python 3.12 required
 ```
 
 #### Step 2: Environment Setup
