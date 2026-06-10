@@ -156,10 +156,8 @@ Graph-based orchestration with business use cases. See [workflows/README.md](wor
 | 5 | `5-credit-limit-with-human-input.ipynb` | **Approval Workflow** | Human-in-the-loop |
 | 6 | `6-workflow-as-agent-human-in-the-loop-transaction-review.ipynb` | **High-Value Authorization** | Workflow-as-agent + escalation |
 | 7 | `7-magentic-compliance-review-with-human-input.ipynb` | **Plan Compliance Review** | Magentic + Human approval |
-| 8 | `8-magentic-investment-research.ipynb` | **Multi-Agent Research** | Magentic multi-agent |
-| 9 | `9-workflow-as-agent-reflection-pattern.ipynb` | **Communication Quality** | Reflection pattern |
 
-**Learning Path**: Streaming → Sequential → Human-in-the-loop → Magentic → Reflection
+**Learning Path**: Streaming → Sequential → Human-in-the-loop → Magentic
 
 ---
 
@@ -171,7 +169,7 @@ Graph-based orchestration with business use cases. See [workflows/README.md](wor
 | 2 | **Persistence** | `threads/` notebooks — message storage and resume patterns |
 | 3 | **Memory** | `context-providers/` — profile collection and RAG with Azure AI Search |
 | 4 | **Tooling** | `agents/azure-ai-agents/4-azure-ai-with-function-tools.ipynb` → 8 (MCP integration) |
-| 5 | **Workflows** | `workflows/` — 1-2 (streaming) → 3-4 (sequential) → 5-7 (human-in-the-loop) → 8 (Magentic) → 9 (Reflection) |
+| 5 | **Workflows** | `workflows/` — 1-2 (streaming) → 3-4 (sequential) → 5-7 (human-in-the-loop) → 7 (Magentic) |
 | 6 | **Observability** | `observability/` — tracing with Azure Monitor and Application Insights |
 | 7 | **Middleware** | `middleware/` — interception patterns for enterprise applications |
 

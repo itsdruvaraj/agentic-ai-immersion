@@ -17,8 +17,6 @@ This folder contains examples demonstrating workflow orchestration patterns with
 | 5 | [`5-credit-limit-with-human-input.ipynb`](5-credit-limit-with-human-input.ipynb) | Credit Limit Approval | Human-in-the-loop decisions |
 | 6 | [`6-workflow-as-agent-human-in-the-loop-transaction-review.ipynb`](6-workflow-as-agent-human-in-the-loop-transaction-review.ipynb) | Wire Transfer Authorization | Workflow-as-agent with escalation |
 | 7 | [`7-magentic-compliance-review-with-human-input.ipynb`](7-magentic-compliance-review-with-human-input.ipynb) | Investment Plan Compliance Review | Magentic multi-agent with human approval |
-| 8 | [`8-magentic-investment-research.ipynb`](8-magentic-investment-research.ipynb) | Investment Research Analysis | Magentic multi-agent orchestration |
-| 9 | [`9-workflow-as-agent-reflection-pattern.ipynb`](9-workflow-as-agent-reflection-pattern.ipynb) | Customer Communication Quality | Reflection pattern with review loop |
 
 ## 🚀 Prerequisites
 
@@ -40,7 +38,7 @@ This folder contains examples demonstrating workflow orchestration patterns with
 |-------|-----------|-------|
 | **Beginner** | 1 (Streaming) → 2 (Chat Streaming) | Basic workflow and streaming patterns |
 | **Intermediate** | 3 (Sequential) → 4 (Custom Executors) | Agent pipelines and custom processing |
-| **Advanced** | 5, 6 (Human-in-the-loop) → 7, 8 (Magentic) → 9 (Reflection) | Complex orchestration patterns |
+| **Advanced** | 5, 6 (Human-in-the-loop) → 7 (Magentic) | Complex orchestration patterns |
 
 ## 🔧 Workflow Patterns
 
@@ -49,22 +47,21 @@ This folder contains examples demonstrating workflow orchestration patterns with
 | **Streaming** | Real-time token streaming responses | 1, 2 |
 | **Sequential** | Linear agent-to-agent handoff | 3, 4 |
 | **Human-in-the-loop** | Pause for human approval/input | 5, 6, 7 |
-| **Magentic** | Multi-agent collaboration with manager | 7, 8 |
-| **Reflection** | Self-review and improvement loop | 9 |
-| **Workflow-as-Agent** | Embed workflow within agent interface | 6, 9 |
+| **Magentic** | Multi-agent collaboration with manager | 7 |
+| **Workflow-as-Agent** | Embed workflow within agent interface | 6 |
 
 ## 🔍 Key APIs Used
 
 | API | Purpose | Notebook |
 |-----|---------|----------|
 | `WorkflowBuilder` | Define workflow graph | All |
-| `register_executor()` | Add executors to workflow | 3, 4, 6, 9 |
+| `register_executor()` | Add executors to workflow | 3, 4, 6 |
 | `with_edge()` | Define execution flow | All |
 | `ctx.request_info()` | Request human input | 5, 6, 7 |
 | `@response_handler` | Handle human responses | 5, 6, 7 |
-| `MagenticBuilder` | Build multi-agent workflows | 7, 8 |
-| `AgentResponseUpdate` | Emit streaming responses | 6, 9 |
-| `AgentRunUpdateEvent` | Add events to context | 6, 9 |
+| `MagenticBuilder` | Build multi-agent workflows | 7 |
+| `AgentResponseUpdate` | Emit streaming responses | 6 |
+| `AgentRunUpdateEvent` | Add events to context | 6 |
 
 ## 💼 Business Use Cases
 
@@ -77,8 +74,6 @@ This folder contains examples demonstrating workflow orchestration patterns with
 | **Approval Workflow** | Risk-based approval with human review | 5 |
 | **High-Value Authorization** | High-value transaction escalation | 6 |
 | **Plan Compliance Review** | Ensure compliance before execution | 7 |
-| **Multi-Agent Research** | Multi-analyst collaboration for research | 8 |
-| **Communication Quality** | Review and improve communications | 9 |
 
 ## 📚 Related Resources
 

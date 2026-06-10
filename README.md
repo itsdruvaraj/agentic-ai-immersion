@@ -68,7 +68,7 @@ agentic-ai-immersion-day/
 │   ├── observability/                         # 3 telemetry notebooks (1-3)
 │   ├── skills/                                # Agent Skills (FSI: credit risk, compliance)
 │   ├── threads/                               # 3 persistence notebooks (1-3)
-│   └── workflows/                             # 9 orchestration notebooks (1-9)
+│   └── workflows/                             # 7 orchestration notebooks (1-7)
 │
 ├── 📊 observability-and-evaluations/          # Evaluation & Security
 │   ├── 1-telemetry.ipynb                      # Azure Monitor telemetry
@@ -324,8 +324,6 @@ The **Microsoft Agent Framework** is an open-source SDK that unifies Semantic Ke
 | 5 | [Limit Approval](agent-framework/workflows/5-credit-limit-with-human-input.ipynb) | Limit Approval Workflow | Human-in-the-loop |
 | 6 | [Transaction Review](agent-framework/workflows/6-workflow-as-agent-human-in-the-loop-transaction-review.ipynb) | High-Value Authorization | Workflow-as-agent |
 | 7 | [Compliance Review](agent-framework/workflows/7-magentic-compliance-review-with-human-input.ipynb) | Plan Compliance Review | Magentic |
-| 8 | [Research Analysis](agent-framework/workflows/8-magentic-investment-research.ipynb) | Multi-Agent Research | Magentic |
-| 9 | [Reflection Pattern](agent-framework/workflows/9-workflow-as-agent-reflection-pattern.ipynb) | Communication Quality | Reflection |
 
 ### 📊 Phase 3: Observability & Evaluations
 **Location:** `observability-and-evaluations/`
